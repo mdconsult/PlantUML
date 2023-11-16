@@ -1,0 +1,26 @@
+@startuml
+
+skin rose
+title Базовая пробная схема системы
+ 
+   package ИнформационнаяСистема {
+      
+       frame ПодсистемаДанные {
+        component [Сбор и обработка данных] as C1
+        database Database as DB
+        C1 <->DB
+          }
+       frame ПодсистемаДействия {
+         component [Пользователь]{
+         component [Личный кабинет] 
+          } 
+        }
+       frame ПодсистемаОтчетность {
+        component [Регулярная отчетность]
+        component [Оперативная отчетность]
+          }
+       frame Администрирование{
+        component [Роли пользователей] 
+         }
+
+@enduml
